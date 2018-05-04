@@ -31,3 +31,135 @@ a:active  {
   font-weight:      bold;
   color: white;
 }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+  justify-content: space-around;
+  .mainContainer,.rightContainer{
+    margin: 2rem;
+    .header{
+      height: 40px;
+      width: 100%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      border-bottom: 1px solid #ccc;
+      h2{
+        margin: 0;
+        padding: 0.7em;
+      }
+    }
+  }
+  .mainContainer{
+    width: 40%;
+    min-height: 80vh;
+    border: 1px solid #cccccc;
+    border-radius: 1.5em;
+    .companies-list{
+      padding: 4em;
+    }
+  }
+  .rightContainer{
+    width: 20%;
+    .create-company,.create-user{
+      border: 1px solid #ccc;
+      border-radius: 1.5em;
+      margin: 20px 0;
+    }
+  }
+}
+.company-card{
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  .card-header{
+    height: 30px;
+    border-bottom: 1px solid #cccccc;
+    background: #cccccc;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 15px;
+    line-height: 2;
+  }
+  .card-body{
+    padding: 10px;
+    font-size: 12px;
+  }
+  .card-footer{
+    height: 15px;
+    border-top: 1px solid #cccccc;
+    background: #cccccc;
+    padding: 0 15px;
+  }
+}
+.card-item{
+  display: flex;
+  flex-direction: column;
+  .label{
+    font-weight: bold;
+  }
+  .description{
+    margin-bottom: 5px;
+  }
+}
+.details-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+  .profileOverView{
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    width: 40%;
+    margin-bottom: 50px;
+    .header{
+      background: #cccccc;
+      height: 20px;
+      padding: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .body{
+      padding: 25px;
+      display: flex;
+      font-size: 12px;
+      flex-direction: row;
+      .section{
+        width: 50%;
+      }
+    }
+    .footer{
+      min-height: 10px;
+    }
+  }
+
+  .user-details{
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    width: 40%;
+    .header{
+      background: #ccc;
+      padding: 25px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .body{
+      padding: 25px;
+    }
+  }
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  margin: 15px;
+  .label{
+    color: #7c7c7c;
+    margin-bottom: 3px;
+  }
+  .input-container{
+    border-radius: 5px;
+  }
+}

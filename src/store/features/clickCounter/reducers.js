@@ -1,37 +1,33 @@
 import types from './types';
-import { createDefaultReducer } from '../../helpers'
+import {createDefaultReducer} from '../../helpers'
 
 const initialState = {
-  number: 0
+    companies: [],
+    update:true
 };
 
-const incrementNumberHandler = (state, payload) => {
-  const number = state.number + 1
-  return {
-    ...state,
-    number
-  }
+const createCompany = (state, payload) => {
+    let data = [];
+    payload['users'] = [];
+    data.push(payload);
+    state.companies = state.companies.concat(data);
+    return {
+        ...state
+    }
 };
 
-const decrementNumberHandler = (state, payload) => {
-  const number = state.number - 1
-  return {
-    ...state,
-    number
-  }
+const createUser = (state, payload) => {
+    state.companies[payload.employer]['users'].push(payload);
+    state.udpate = !state.update;
+    return {
+        ...state
+    }
 };
 
-const resetNumberHandler = (state, payload) => {
-  return {
-    ...state,
-    number: 0
-  }
-}
 
 const actionMap = {
-  [types.INCREMENT_NUMBER]: incrementNumberHandler,
-  [types.DECREMENT_NUMBER]: decrementNumberHandler,
-  [types.RESET_TO_ZERO]: resetNumberHandler
+    [types.CREATE_COMPANY]: createCompany,
+    [types.CREATE_USER]: createUser
 };
 
 export default createDefaultReducer(actionMap, initialState)

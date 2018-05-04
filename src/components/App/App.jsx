@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <div className="app__header">
+          {/*<div className="app__header">
             <div className="app__header-title">
               LMNOP LLC.
             </div>
@@ -27,9 +27,9 @@ class App extends Component {
                 </span>
               </div>
             </div>
-          </div>
+          </div>*/}
           <Route exact path="/" component={HomePage} />
-          <Route path="/details" component={DetailsPage} />
+          <Route path="/details/:company" component={DetailsPage} />
           <Route path="/number" component={NumberPage} />
         </React.Fragment>
       </Router>
